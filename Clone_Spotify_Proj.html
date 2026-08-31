@@ -1,162 +1,621 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="icon" href="../Assets/Logo.png">
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" href="../../Assets/Logo.png">
+
     <title>Spotify - Web Player: Music for everyone</title>
-    <link rel="stylesheet" href="Clone_Spot_Pr.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
 
 </head>
+
+
 <body>
+
     <div class="main">
+
+        <!-- ================= SIDEBAR ================= -->
+
         <div class="sidebar">
+
+            <!-- Navigation -->
+
             <div class="nav">
+
                 <div class="nav_option" style="opacity: 1;">
+
                     <i class="fa-solid fa-house"></i>
+
                     <a href="#">Home</a>
+
                 </div>
+
+
                 <div class="nav_option">
+
                     <i class="fa-solid fa-magnifying-glass"></i>
+
                     <a href="#">Search</a>
-                </div>
-            </div>
-            <div class="library">
-                <div class="options">
-                    <div class="lib_option nav_option">
-                        <img src="../Assets/library.png">
-                        <a href="#">Your Library</a>
-                    </div>    
-                    <div class="icons">
-                        <i class="fa-solid fa-plus"></i>
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </div>
-                </div>
-                <div class="lib_box">
-                    <div class="box">
-                        <p class="box_p1">Create your first playlist</p>
-                        <p class="box_p2">It's easy, we'll help you</p>
-                        <button class="badge">Crate playlist</button>
-                    </div>  
-                    <div class="box">
-                        <p class="box_p1">Let's find some podcastto follow</p>
-                        <p class="box_p2">We'll keep you updated on new episods</p>
-                        <button class="badge">Browes podcasts</button>
-                    </div>    
-                </div>
-            </div>
-        </div>
-        <div class="main_content">
-            <div class="sticky_nav">
-                <div class="sticky_nav_icons">
-                    <i class="fa-solid fa-chevron-left"></i>
-                    <i class="fa-solid fa-chevron-right hide"></i>
-                </div>
-                <div class="sticky_nav_option">
-                    <button class="badge  nav_item hide">Explore Premium</button>
-                    <button class="badge nav_item dark_badge"><i class="fa-regular fa-circle-down" style="margin-right: 5px;"></i>Install App</button>
-                    <i class="fa-regular fa-user nav_item"></i>
-                </div>
-                
-            </div>
-            <h2>Recently Played</h2>
-            <div class="cards_container">
-                <div class="card">
-                    <img src="../Assets/cards.jpg">
-                    <p class="card_title">Top 50 - Global</p>
-                    <p class="card_info">Your daily updates of the most played...</p>
-                </div>
-            </div>
-            <h2>Trending now near you</h2>
-            <div class="cards_container">
-                <div class="card">
-                    <img src="../Assets/dabang.jpg">
-                    <p class="card_title">Dabang-2</p>
-                    <p class="card_info">Your daily updates of the most played...</p>
-                </div>
-                <div class="card">
-                    <img src="../Assets/rahat.jpg">
-                    <p class="card_title">Back2-Love</p>
-                    <p class="card_info">Your daily updates of the most played...</p>
-                </div>
-                <div class="card">
-                    <img src="../Assets/audio.jpg">
-                    <p class="card_title">Himalya Putra</p>
-                    <p class="card_info">Your daily updates of the most played...</p>
-                </div>
-                <div class="card">
-                    <img src="../Assets/darshan.jpg">
-                    <p class="card_title">Tu Mileya</p>
-                    <p class="card_info">Your daily updates of the most played...</p>
-                </div>
-                <div class="card">
-                    <img src="../Assets/rahat2.jpg">
-                    <p class="card_title">Top 15 - Songs</p>
-                    <p class="card_info">Your daily updates of the most played...</p>
+
                 </div>
 
             </div>
-            <h2>Featured Charts</h2>
+
+
+            <!-- Library -->
+
+            <div class="library">
+
+                <div class="options">
+
+                    <div class="lib_option nav_option">
+
+                        <img src="../../Assets/library.png">
+
+                        <a href="#">Your Library</a>
+
+                    </div>
+
+
+                    <div class="icons">
+
+                        <i class="fa-solid fa-plus"></i>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </div>
+
+                </div>
+
+
+                <div class="lib_box">
+
+                    <!-- Playlist Box -->
+
+                    <div class="box">
+
+                        <p class="box_p1">
+                            Create your first playlist
+                        </p>
+
+                        <p class="box_p2">
+                            It's easy, we'll help you
+                        </p>
+
+                        <button class="badge">
+                            Crate playlist
+                        </button>
+
+                    </div>
+
+
+                    <!-- Podcast Box -->
+
+                    <div class="box">
+
+                        <p class="box_p1">
+                            Let's find some podcastto follow
+                        </p>
+
+                        <p class="box_p2">
+                            We'll keep you updated on new episods
+                        </p>
+
+                        <button class="badge">
+                            Browes podcasts
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= MAIN CONTENT ================= -->
+
+        <div class="main_content">
+
+
+            <!-- Sticky Navigation -->
+
+            <div class="sticky_nav">
+
+                <div class="sticky_nav_icons">
+
+                    <i class="fa-solid fa-chevron-left"></i>
+
+                    <i class="fa-solid fa-chevron-right hide"></i>
+
+                </div>
+
+
+                <div class="sticky_nav_option">
+
+                    <button class="badge nav_item hide">
+                        Explore Premium
+                    </button>
+
+
+                    <button class="badge nav_item dark_badge">
+
+                        <i
+                            class="fa-regular fa-circle-down"
+                            style="margin-right: 5px;">
+                        </i>
+
+                        Install App
+
+                    </button>
+
+
+                    <i class="fa-regular fa-user nav_item"></i>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= RECENTLY PLAYED ================= -->
+
+            <h2>Recently Played</h2>
+
+
             <div class="cards_container">
+
                 <div class="card">
-                    <img src="../Assets/top_songs.jpg">
-                    <p class="card_title">Top Song - Global</p>
-                    <p class="card_info">Your daily updates of the most played...</p>
+
+                    <img src="../../Assets/cards.jpg">
+
+                    <p class="card_title">
+                        Top 50 - Global
+                    </p>
+
+                    <p class="card_info">
+                        Your daily updates of the most played...
+                    </p>
+
                 </div>
+
+            </div>
+
+
+            <!-- ================= TRENDING ================= -->
+
+            <h2>Trending now near you</h2>
+
+
+            <div class="cards_container">
+
+
+                <!-- DABANG-2 -->
+
+                <div
+                    class="card"
+                    data-song="../../Assets/Dabang-2.mp3"
+                    data-artist="Dabang-2 Artist"
+                    data-image="../../Assets/dabang.jpg"
+                >
+
+                    <img src="../../Assets/dabang.jpg">
+
+                    <p class="card_title">
+                        Dabang-2
+                    </p>
+
+                    <p class="card_info">
+                        Your daily updates of the most played...
+                    </p>
+
+                </div>
+
+
+                <!-- HIMALYA PUTRA -->
+
+                <div
+                    class="card"
+                    data-song="../../Assets/Himalya Putra.mp3"
+                    data-artist="Himalya"
+                    data-image="../../Assets/audio.jpg"
+                >
+
+                    <img src="../../Assets/audio.jpg">
+
+                    <p class="card_title">
+                        Himalya Putra
+                    </p>
+
+                    <p class="card_info">
+                        Your daily updates of the most played...
+                    </p>
+
+                </div>
+
+
+                <!-- TU MILEYA -->
+
+                <div
+                    class="card"
+                    data-song="../../Assets/Tu Mileya.mp3"
+                    data-artist="Darshan Raval"
+                    data-image="../../Assets/darshan.jpg"
+                >
+
+                    <img src="../../Assets/darshan.jpg">
+
+                    <p class="card_title">
+                        Tu Mileya
+                    </p>
+
+                    <p class="card_info">
+                        Your daily updates of the most played...
+                    </p>
+
+                </div>
+
+                <!-- BACK2-LOVE -->
+
+                <div
+                    class="card"
+                    data-song="../../Assets/Back2-Love.mp3"
+                    data-artist="Rahat Fateh Ali Khan"
+                    data-image="../../Assets/rahat.jpg"
+                >
+
+                    <img src="../../Assets/rahat.jpg">
+
+                    <p class="card_title">
+                        Back2-Love
+                    </p>
+
+                    <p class="card_info">
+                        Your daily updates of the most played...
+                    </p>
+
+                </div>
+                <!-- SAIYAARA -->
+
+                <div
+                    class="card"
+                    data-song="../../Assets/songs.mp3"
+                    data-artist="Tanishk Bagchi"
+                    data-image="../../Assets/saiayara.jpg"
+                >
+
+                    <img src="../../Assets/saiayara.jpg">
+
+                    <p class="card_title">
+                        Saiyaara
+                    </p>
+
+                    <p class="card_info">
+                        Your daily updates of the most played...
+                    </p>
+
+                </div>
+
+
+                <!-- TOP 15 SONGS -->
+
                 <div class="card">
-                    <img src="../Assets/top_india.jpg">
-                    <p class="card_title">Top Songs - india</p>
-                    <p class="card_info">Your daily updates of the most played...</p>
+
+                    <img src="../../Assets/rahat2.jpg">
+
+                    <p class="card_title">
+                        Top 15 - Songs
+                    </p>
+
+                    <p class="card_info">
+                        Your daily updates of the most played...
+                    </p>
+
                 </div>
+
+            </div>
+
+
+            <!-- ================= FEATURED CHARTS ================= -->
+
+            <h2>Featured Charts</h2>
+
+
+            <div class="cards_container">
+
+
+                <!-- TOP SONG GLOBAL -->
+
                 <div class="card">
-                    <img src="../Assets/top_50.jpg">
-                    <p class="card_title">Top 50 - Global</p>
-                    <p class="card_info">Your daily updates of the most played...</p>
+
+                    <img src="../../Assets/top_songs.jpg">
+
+                    <p class="card_title">
+                        Top Song - Global
+                    </p>
+
+                    <p class="card_info">
+                        Your daily updates of the most played...
+                    </p>
+
                 </div>
-            </div>   
+                
+
+
+                <!-- TOP SONGS INDIA -->
+
+                <div class="card">
+
+                    <img src="../../Assets/top_india.jpg">
+
+                    <p class="card_title">
+                        Top Songs - india
+                    </p>
+
+                    <p class="card_info">
+                        Your daily updates of the most played...
+                    </p>
+
+                </div>
+
+
+                <!-- TOP 50 GLOBAL -->
+
+                <div class="card">
+
+                    <img src="../../Assets/top_50.jpg">
+
+                    <p class="card_title">
+                        Top 50 - Global
+                    </p>
+
+                    <p class="card_info">
+                        Your daily updates of the most played...
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= FOOTER ================= -->
+
             <div class="footer">
+
                 <div class="line"></div>
+
             </div>
+
         </div>
+
+
+        <!-- ================= MUSIC PLAYER ================= -->
+
         <div class="music_player">
+
+
+            <!-- AUDIO -->
+
+            <audio
+                id="audioPlayer"
+                src="../../Assets/songs.mp3">
+            </audio>
+
+
+            <!-- ================= ALBUM INFO ================= -->
+
             <div class="album">
+
                 <div>
-                <img src="../Assets/saiayara.jpg">
+
+                    <img
+                        id="playerImage"
+                        src="../../Assets/saiayara.jpg">
+
                 </div>
+
+
                 <div>
-                <p class="daylight">Saiyara</p>
-                <p class="david"> Tanishk Baghchi</p>
+
+                    <p
+                        id="playerTitle"
+                        class="daylight">
+                        Saiyara
+                    </p>
+
+
+                    <p
+                        id="playerArtist"
+                        class="david">
+                        Tanishk Baghchi
+                    </p>
+
                 </div>
-                <!-- <i class="fa-regular fa-heart"></i> -->
+
             </div>
+
+
+            <!-- ================= PLAYER ================= -->
+
             <div class="player">
+
+
+                <!-- PLAYER CONTROLS -->
+
                 <div class="player_controls">
-                    <i class="fa-solid fa-shuffle player_control_icon"></i>
-                    <i class="fa-solid fa-backward-step player_control_icon"></i>
-                    <i class="fa-solid fa-circle-play player_control_icon" style="opacity: 1; font-size: 2rem;"></i>
-                    <i class="fa-solid fa-forward-step player_control_icon"></i>
-                    <i class="fa-solid fa-repeat player_control_icon"></i>
+
+
+                    <!-- Shuffle -->
+
+                    <i id="shuffleBtn"
+                        class="fa-solid fa-shuffle player_control_icon">
+                    </i>
+
+                    <!-- Previous -->
+
+                    <i
+                        id="previousBtn"
+                        class="fa-solid fa-backward-step player_control_icon">
+                    </i>
+
+                    <!--Play Pause Button-->
+
+                    <i id="playPauseBtn"
+                        class="fa-solid fa-circle-play player_control_icon"
+                        style="opacity: 1; font-size: 2rem;">
+                    </i>
+
+
+                    <!-- Next -->
+
+                    <i
+                        id="nextBtn"
+                        class="fa-solid fa-forward-step player_control_icon">
+                    </i>
+
+
+                    <!-- Repeat -->
+
+                    <i
+                        class="fa-solid fa-repeat player_control_icon">
+                    </i>
+
                 </div>
+
+
+                <!-- ================= PROGRESS BAR ================= -->
+
                 <div class="playback_bar">
-                    <span class="curr_time">00:00</span>
-                    <input type="range" min="0" max="100" class="progress_bar">
-                    <span class="tot_time">3:33</span>
+
+
+                    <span class="curr_time">
+                        00:00
+                    </span>
+
+
+                    <input
+                        type="range"
+                        min="0"
+                        max="100"
+                        value="0"
+                        class="progress_bar"
+                    >
+
+
+                    <span class="tot_time">00:00
+                        
+                    </span>
+
                 </div>
+
             </div>
+
+
+            <!-- ================= RIGHT CONTROLS ================= -->
+
             <div class="control">
-                <img src="../Assets/mike.png" class="right_con" style="height: 35px; width:27px;">
-                <img src="../Assets/controls_icon3.png" class="right_con" style="height: 20px; width: 20px; opacity: 0.7;">
-                <img src="../Assets/controls_icon4.png" class="right_con" style="height: 15px; width: 17px; opacity: 0.7;">
-                <img src="../Assets/speaker.png" class="right_con" style="height: 35px; width: 25px; margin-right: 0.3rem;">
-                <input type="range" class="range">
-                <img src="../Assets/tv.png" class="right_con" style="height: 33px; width: 25px; margin-left: 0.3rem;">
-                <i class="fa-solid fa-expand" class="right_con" style="opacity: 0.7;"></i>
+
+
+                <!-- Microphone -->
+
+                <img
+                    src="../../Assets/mike.png"
+                    class="right_con"
+                    style="height: 35px; width: 27px;"
+                >
+
+
+                <!-- Control Icon -->
+
+                <img
+                    src="../../Assets/controls_icon3.png"
+                    class="right_con"
+                    style="height: 20px; width: 20px; opacity: 0.7;"
+                >
+
+
+                <!-- Control Icon -->
+
+                <img
+                    src="../../Assets/controls_icon4.png"
+                    class="right_con"
+                    style="height: 15px; width: 17px; opacity: 0.7;"
+                >
+
+
+                <!-- Speaker -->
+
+                <img
+                    src="../../Assets/speaker.png"
+                    class="right_con"
+                    style="height: 35px; width: 25px; margin-right: 0.3rem;"
+                >
+
+
+                <!-- Volume -->
+
+                <input
+                    type="range"
+                    min="0"
+                    max="100"
+                    value="50"
+                    class="range"
+                >
+
+
+                <!-- TV -->
+
+                <img
+                    src="../../Assets/tv.png"
+                    class="right_con"
+                    style="height: 33px; width: 25px; margin-left: 0.3rem;"
+                >
+
+
+                <!-- Full Screen -->
+
+                <i
+                    class="fa-solid fa-expand right_con"
+                    style="opacity: 0.7;">
+                </i>
+
             </div>
+
         </div>
+
     </div>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="app.js"></script>
+
 </body>
+
 </html>
