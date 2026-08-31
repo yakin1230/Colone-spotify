@@ -34,36 +34,36 @@ const songs = [
     {
         title: "Dabang-2",
         artist: "Dabang-2 Artist",
-        song: "../../Assets/Dabang-2.mp3",
-        image: "../../Assets/dabang.jpg"
+        song: "Assets/Dabang-2.mp3",
+        image: "Assets/dabang.jpg"
     },
 
     {
         title: "Himalya Putra",
         artist: "Himalya",
-        song: "../../Assets/Himalya Putra.mp3",
-        image: "../../Assets/audio.jpg"
+        song: "Assets/Himalya Putra.mp3",
+        image: "Assets/audio.jpg"
     },
 
     {
         title: "Tu Mileya",
         artist: "Darshan Raval",
-        song: "../../Assets/Tu Mileya.mp3",
-        image: "../../Assets/darshan.jpg"
+        song: "Assets/Tu Mileya.mp3",
+        image: "Assets/darshan.jpg"
     },
 
     {
         title: "Back2-Love",
         artist: "Rahat Fateh Ali Khan",
-        song: "../../Assets/Back2-Love.mp3",
-        image: "../../Assets/rahat.jpg"
+        song: "Assets/Back2-Love.mp3",
+        image: "Assets/rahat.jpg"
     },
 
     {
         title: "Saiyaara",
         artist: "Tanishk Bagchi",
-        song: "../../Assets/songs.mp3",
-        image: "../../Assets/saiayara.jpg"
+        song: "Assets/songs.mp3",
+        image: "Assets/saiayara.jpg"
     }
 
 ];
