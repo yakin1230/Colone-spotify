@@ -5,32 +5,43 @@
 
     <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    <!-- Font Awesome -->
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-        crossorigin="anonymous"
-        referrerpolicy="no-referrer"
-    />
+    <title>Spotify Clone</title>
 
-    <!-- Favicon -->
-    <link rel="icon" href="Assets/Logo.png">
 
-    <title>Spotify - Web Player: Music for everyone</title>
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- ================= FAVICON ================= -->
 
     <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="icon"
+        href="Assets/Logo.png"
+    >
+
+
+    <!-- ================= GOOGLE FONT ================= -->
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
         rel="stylesheet"
+    >
+
+
+    <!-- ================= FONT AWESOME ================= -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+
+    <!-- ================= CSS ================= -->
+
+    <link
+        rel="stylesheet"
+        href="style.css"
     >
 
 </head>
@@ -38,47 +49,114 @@
 
 <body>
 
+
+    <!-- ================================================= -->
+    <!--                    MAIN                           -->
+    <!-- ================================================= -->
+
     <div class="main">
 
-        <!-- ================= SIDEBAR ================= -->
 
-        <div class="sidebar">
+        <!-- ================================================= -->
+        <!--             MOBILE SIDEBAR BUTTON                 -->
+        <!-- ================================================= -->
 
-            <!-- Navigation -->
+        <button
+            id="sidebarBtn"
+            class="sidebar_btn"
+            aria-label="Open sidebar"
+        >
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+
+        <!-- ================================================= -->
+        <!--                    SIDEBAR                        -->
+        <!-- ================================================= -->
+
+        <div
+            class="sidebar"
+            id="sidebar"
+        >
+
+
+            <!-- ================= CLOSE BUTTON ================= -->
+
+            <button
+                id="closeSidebar"
+                class="close_sidebar"
+                aria-label="Close sidebar"
+            >
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+
+            <!-- ================================================= -->
+            <!--                     NAV                           -->
+            <!-- ================================================= -->
 
             <div class="nav">
 
-                <div class="nav_option" style="opacity: 1;">
+
+                <!-- ================= HOME ================= -->
+
+                <div
+                    class="nav_option"
+                    style="opacity: 1;"
+                >
 
                     <i class="fa-solid fa-house"></i>
 
-                    <a href="#">Home</a>
+                    <a href="#">
+                        Home
+                    </a>
 
                 </div>
 
+
+                <!-- ================= SEARCH ================= -->
 
                 <div class="nav_option">
 
                     <i class="fa-solid fa-magnifying-glass"></i>
 
-                    <a href="#">Search</a>
+                    <a href="#">
+                        Search
+                    </a>
 
                 </div>
+
 
             </div>
 
 
-            <!-- Library -->
+
+            <!-- ================================================= -->
+            <!--                    LIBRARY                        -->
+            <!-- ================================================= -->
 
             <div class="library">
 
+
+                <!-- ================= LIBRARY HEADER ================= -->
+
                 <div class="options">
 
-                    <div class="lib_option nav_option">
 
-                        <img src="Assets/library.png">
+                    <div class="lib_option">
 
-                        <a href="#">Your Library</a>
+                        <img
+                            src="Assets/library.png"
+                            alt="Library"
+                        >
+
+                        <a href="#">
+                            Your Library
+                        </a>
 
                     </div>
 
@@ -91,320 +169,416 @@
 
                     </div>
 
+
+                </div>
+
+
+
+                <!-- ================================================= -->
+                <!--                CREATE PLAYLIST                    -->
+                <!-- ================================================= -->
+
+                <div class="box">
+
+                    <p class="box_p1">
+                        Create your first playlist
+                    </p>
+
+                    <p class="box_p2">
+                        It's easy, we'll help you
+                    </p>
+
+                    <button class="badge">
+                        Crate playlist
+                    </button>
+
                 </div>
 
 
-                <div class="lib_box">
 
-                    <!-- Playlist Box -->
+                <!-- ================================================= -->
+                <!--                  PODCAST                           -->
+                <!-- ================================================= -->
 
-                    <div class="box">
+                <div class="box">
 
-                        <p class="box_p1">
-                            Create your first playlist
-                        </p>
+                    <p class="box_p1">
+                        Let's find some podcastto follow
+                    </p>
 
-                        <p class="box_p2">
-                            It's easy, we'll help you
-                        </p>
+                    <p class="box_p2">
+                        We'll keep you updated on new episodes
+                    </p>
 
-                        <button class="badge">
-                            Crate playlist
-                        </button>
-
-                    </div>
-
-
-                    <!-- Podcast Box -->
-
-                    <div class="box">
-
-                        <p class="box_p1">
-                            Let's find some podcastto follow
-                        </p>
-
-                        <p class="box_p2">
-                            We'll keep you updated on new episods
-                        </p>
-
-                        <button class="badge">
-                            Browes podcasts
-                        </button>
-
-                    </div>
+                    <button class="badge">
+                        Browes podcasts
+                    </button>
 
                 </div>
+
 
             </div>
+
 
         </div>
 
 
-        <!-- ================= MAIN CONTENT ================= -->
+
+        <!-- ================================================= -->
+        <!--                 MAIN CONTENT                      -->
+        <!-- ================================================= -->
 
         <div class="main_content">
 
 
-            <!-- Sticky Navigation -->
+            <!-- ================================================= -->
+            <!--                  STICKY NAV                       -->
+            <!-- ================================================= -->
 
             <div class="sticky_nav">
+
+
+                <!-- ================= LEFT ================= -->
 
                 <div class="sticky_nav_icons">
 
                     <i class="fa-solid fa-chevron-left"></i>
 
-                    <i class="fa-solid fa-chevron-right hide"></i>
+                    <i class="fa-solid fa-chevron-right"></i>
 
                 </div>
 
 
+                <!-- ================= RIGHT ================= -->
+
                 <div class="sticky_nav_option">
 
-                    <button class="badge nav_item hide">
+
+                    <button class="badge nav_item">
                         Explore Premium
                     </button>
 
 
-                    <button class="badge nav_item dark_badge">
-
-                        <i
-                            class="fa-regular fa-circle-down"
-                            style="margin-right: 5px;">
-                        </i>
-
+                    <button class="badge dark_badge nav_item">
                         Install App
-
                     </button>
 
 
-                    <i class="fa-regular fa-user nav_item"></i>
-
                 </div>
+
 
             </div>
 
 
-            <!-- ================= RECENTLY PLAYED ================= -->
 
-            <h2>Recently Played</h2>
+            <!-- ================================================= -->
+            <!--                 RECENTLY PLAYED                   -->
+            <!-- ================================================= -->
 
-
-            <div class="cards_container">
-
-                <div class="card">
-
-                    <img src="Assets/cards.jpg">
-
-                    <p class="card_title">
-                        Top 50 - Global
-                    </p>
-
-                    <p class="card_info">
-                        Your daily updates of the most played...
-                    </p>
-
-                </div>
-
-            </div>
+            <section>
 
 
-            <!-- ================= TRENDING ================= -->
-
-            <h2>Trending now near you</h2>
-
-
-            <div class="cards_container">
+                <h2>
+                    Recently Played
+                </h2>
 
 
-                <!-- DABANG-2 -->
+                <div class="cards_container">
 
-                <div
-                    class="card"
-                    data-song="Assets/Dabang-2.mp3"
-                    data-artist="Dabang-2 Artist"
-                    data-image="Assets/dabang.jpg"
-                >
 
-                    <img src="Assets/dabang.jpg">
+                    <!-- ================= TOP 50 ================= -->
 
-                    <p class="card_title">
-                        Dabang-2
-                    </p>
+                    <div class="card">
 
-                    <p class="card_info">
-                        Your daily updates of the most played...
-                    </p>
+                        <img
+                            src="Assets/top_50.jpg"
+                            alt="Top 50 Global"
+                        >
+
+                        <p class="card_title">
+                            Top 50 - Global
+                        </p>
+
+                        <p class="card_info">
+                            Your daily updates of the most played...
+                        </p>
+
+                    </div>
+
 
                 </div>
 
 
-                <!-- HIMALYA PUTRA -->
+            </section>
 
-                <div
-                    class="card"
-                    data-song="Assets/Himalya Putra.mp3"
-                    data-artist="Himalya"
-                    data-image="Assets/audio.jpg"
-                >
 
-                    <img src="Assets/audio.jpg">
 
-                    <p class="card_title">
-                        Himalya Putra
-                    </p>
+            <!-- ================================================= -->
+            <!--              TRENDING NOW                         -->
+            <!-- ================================================= -->
 
-                    <p class="card_info">
-                        Your daily updates of the most played...
-                    </p>
+            <section>
+
+
+                <h2>
+                    Trending now near you
+                </h2>
+
+
+                <div class="cards_container">
+
+
+                    <!-- ================================================= -->
+                    <!--                    DABANG-2                       -->
+                    <!-- ================================================= -->
+
+                    <div
+                        class="card"
+                        data-song="Assets/Dabang-2.mp3"
+                        data-image="Assets/dabang.jpg"
+                    >
+
+                        <img
+                            src="Assets/dabang.jpg"
+                            alt="Dabang 2"
+                        >
+
+                        <p class="card_title">
+                            Dabang-2
+                        </p>
+
+                        <p class="card_info">
+                            Your daily updates of the most played...
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- ================================================= -->
+                    <!--                 HIMALYA PUTRA                    -->
+                    <!-- ================================================= -->
+
+                    <div
+                        class="card"
+                        data-song="Assets/Himalya Putra.mp3"
+                        data-image="Assets/audio.jpg"
+                    >
+
+                        <img
+                            src="Assets/audio.jpg"
+                            alt="Himalya Putra"
+                        >
+
+                        <p class="card_title">
+                            Himalya Putra
+                        </p>
+
+                        <p class="card_info">
+                            Your daily updates of the most played...
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- ================================================= -->
+                    <!--                   TU MILEYA                      -->
+                    <!-- ================================================= -->
+
+                    <div
+                        class="card"
+                        data-song="Assets/Tu Mileya.mp3"
+                        data-image="Assets/darshan.jpg"
+                    >
+
+                        <img
+                            src="Assets/darshan.jpg"
+                            alt="Tu Mileya"
+                        >
+
+                        <p class="card_title">
+                            Tu Mileya
+                        </p>
+
+                        <p class="card_info">
+                            Your daily updates of the most played...
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- ================================================= -->
+                    <!--                  BACK 2 LOVE                      -->
+                    <!-- ================================================= -->
+
+                    <div
+                        class="card"
+                        data-song="Assets/Back2-Love.mp3"
+                        data-image="Assets/rahat.jpg"
+                    >
+
+                        <img
+                            src="Assets/rahat.jpg"
+                            alt="Back2 Love"
+                        >
+
+                        <p class="card_title">
+                            Back2-Love
+                        </p>
+
+                        <p class="card_info">
+                            Your daily updates of the most played...
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- ================================================= -->
+                    <!--                    SAIYAARA                       -->
+                    <!-- ================================================= -->
+
+                    <div
+                        class="card"
+                        data-song="Assets/songs.mp3"
+                        data-image="Assets/saiayara.jpg"
+                    >
+
+                        <img
+                            src="Assets/saiayara.jpg"
+                            alt="Saiyaara"
+                        >
+
+                        <p class="card_title">
+                            Saiyaara
+                        </p>
+
+                        <p class="card_info">
+                            Your daily updates of the most played...
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- ================================================= -->
+                    <!--                  TOP 15 SONGS                     -->
+                    <!-- ================================================= -->
+
+                    <div class="card">
+
+                        <img
+                            src="Assets/rahat2.jpg"
+                            alt="Top 15 Songs"
+                        >
+
+                        <p class="card_title">
+                            Top 15 - Songs
+                        </p>
+
+                        <p class="card_info">
+                            Your daily updates of the most played...
+                        </p>
+
+                    </div>
+
 
                 </div>
 
 
-                <!-- TU MILEYA -->
-
-                <div
-                    class="card"
-                    data-song="Assets/Tu Mileya.mp3"
-                    data-artist="Darshan Raval"
-                    data-image="Assets/darshan.jpg"
-                >
-
-                    <img src="Assets/darshan.jpg">
-
-                    <p class="card_title">
-                        Tu Mileya
-                    </p>
-
-                    <p class="card_info">
-                        Your daily updates of the most played...
-                    </p>
-
-                </div>
-
-                <!-- BACK2-LOVE -->
-
-                <div
-                    class="card"
-                    data-song="Assets/Back2-Love.mp3"
-                    data-artist="Rahat Fateh Ali Khan"
-                    data-image="Assets/rahat.jpg"
-                >
-
-                    <img src="Assets/rahat.jpg">
-
-                    <p class="card_title">
-                        Back2-Love
-                    </p>
-
-                    <p class="card_info">
-                        Your daily updates of the most played...
-                    </p>
-
-                </div>
-                <!-- SAIYAARA -->
-
-                <div
-                    class="card"
-                    data-song="Assets/songs.mp3"
-                    data-artist="Tanishk Bagchi"
-                    data-image="Assets/saiayara.jpg"
-                >
-
-                    <img src="Assets/saiayara.jpg">
-
-                    <p class="card_title">
-                        Saiyaara
-                    </p>
-
-                    <p class="card_info">
-                        Your daily updates of the most played...
-                    </p>
-
-                </div>
+            </section>
 
 
-                <!-- TOP 15 SONGS -->
 
-                <div class="card">
+            <!-- ================================================= -->
+            <!--                 FEATURED CHARTS                    -->
+            <!-- ================================================= -->
 
-                    <img src="Assets/rahat2.jpg">
-
-                    <p class="card_title">
-                        Top 15 - Songs
-                    </p>
-
-                    <p class="card_info">
-                        Your daily updates of the most played...
-                    </p>
-
-                </div>
-
-            </div>
+            <section>
 
 
-            <!-- ================= FEATURED CHARTS ================= -->
-
-            <h2>Featured Charts</h2>
-
-
-            <div class="cards_container">
+                <h2>
+                    Featured Charts
+                </h2>
 
 
-                <!-- TOP SONG GLOBAL -->
-
-                <div class="card">
-
-                    <img src="Assets/top_songs.jpg">
-
-                    <p class="card_title">
-                        Top Song - Global
-                    </p>
-
-                    <p class="card_info">
-                        Your daily updates of the most played...
-                    </p>
-
-                </div>
-                
+                <div class="cards_container">
 
 
-                <!-- TOP SONGS INDIA -->
+                    <!-- ================= TOP INDIA ================= -->
 
-                <div class="card">
+                    <div class="card">
 
-                    <img src="Assets/top_india.jpg">
+                        <img
+                            src="Assets/top_india.jpg"
+                            alt="Top India"
+                        >
 
-                    <p class="card_title">
-                        Top Songs - india
-                    </p>
+                        <p class="card_title">
+                            Top 50 - India
+                        </p>
 
-                    <p class="card_info">
-                        Your daily updates of the most played...
-                    </p>
+                        <p class="card_info">
+                            Your daily updates of the most played...
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- ================= TOP SONGS ================= -->
+
+                    <div class="card">
+
+                        <img
+                            src="Assets/top_songs.jpg"
+                            alt="Top Songs"
+                        >
+
+                        <p class="card_title">
+                            Top Songs
+                        </p>
+
+                        <p class="card_info">
+                            Your daily updates of the most played...
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- ================= GLOBAL ================= -->
+
+                    <div class="card">
+
+                        <img
+                            src="Assets/top_50.jpg"
+                            alt="Global"
+                        >
+
+                        <p class="card_title">
+                            Top 50 - Global
+                        </p>
+
+                        <p class="card_info">
+                            Your daily updates of the most played...
+                        </p>
+
+                    </div>
+
 
                 </div>
 
 
-                <!-- TOP 50 GLOBAL -->
-
-                <div class="card">
-
-                    <img src="Assets/top_50.jpg">
-
-                    <p class="card_title">
-                        Top 50 - Global
-                    </p>
-
-                    <p class="card_info">
-                        Your daily updates of the most played...
-                    </p>
-
-                </div>
-
-            </div>
+            </section>
 
 
-            <!-- ================= FOOTER ================= -->
+
+            <!-- ================================================= -->
+            <!--                     FOOTER                        -->
+            <!-- ================================================= -->
 
             <div class="footer">
 
@@ -412,104 +586,127 @@
 
             </div>
 
+
         </div>
 
 
-        <!-- ================= MUSIC PLAYER ================= -->
+
+        <!-- ================================================= -->
+        <!--                 MUSIC PLAYER                      -->
+        <!-- ================================================= -->
 
         <div class="music_player">
 
 
-            <!-- AUDIO -->
+            <!-- ================================================= -->
+            <!--                    AUDIO                           -->
+            <!-- ================================================= -->
 
             <audio
                 id="audioPlayer"
-                src="Assets/songs.mp3">
-            </audio>
+                src="Assets/songs.mp3"
+            ></audio>
 
 
-            <!-- ================= ALBUM INFO ================= -->
+
+            <!-- ================================================= -->
+            <!--                     ALBUM                          -->
+            <!-- ================================================= -->
 
             <div class="album">
 
+
+                <img
+                    id="playerImage"
+                    src="Assets/saiayara.jpg"
+                    alt="Saiyaara"
+                >
+
+
                 <div>
 
-                    <img
-                        id="playerImage"
-                        src="Assets/saiayara.jpg">
-
-                </div>
-
-
-                <div>
-
-                    <p
-                        id="playerTitle"
-                        class="daylight">
-                        Saiyara
+                    <p id="playerTitle">
+                        Saiyaara
                     </p>
-
 
                     <p
                         id="playerArtist"
-                        class="david">
-                        Tanishk Baghchi
+                        class="david"
+                    >
+                        Tanishk Bagchi
                     </p>
 
                 </div>
+
 
             </div>
 
 
-            <!-- ================= PLAYER ================= -->
+
+            <!-- ================================================= -->
+            <!--                    PLAYER                          -->
+            <!-- ================================================= -->
 
             <div class="player">
 
 
-                <!-- PLAYER CONTROLS -->
+                <!-- ================= PLAYER CONTROLS ================= -->
 
                 <div class="player_controls">
 
 
-                    <!-- Shuffle -->
+                    <!-- SHUFFLE -->
 
-                    <i id="shuffleBtn"
-                        class="fa-solid fa-shuffle player_control_icon">
-                    </i>
+                    <i
+                        id="shuffleBtn"
+                        class="fa-solid fa-shuffle player_control_icon"
+                        title="Shuffle"
+                    ></i>
 
-                    <!-- Previous -->
+
+                    <!-- PREVIOUS -->
 
                     <i
                         id="previousBtn"
-                        class="fa-solid fa-backward-step player_control_icon">
-                    </i>
+                        class="fa-solid fa-backward-step player_control_icon"
+                        title="Previous"
+                    ></i>
 
-                    <!--Play Pause Button-->
 
-                    <i id="playPauseBtn"
+                    <!-- PLAY / PAUSE -->
+
+                    <i
+                        id="playPauseBtn"
                         class="fa-solid fa-circle-play player_control_icon"
-                        style="opacity: 1; font-size: 2rem;">
-                    </i>
+                        style="opacity: 1; font-size: 2rem;"
+                        title="Play / Pause"
+                    ></i>
 
 
-                    <!-- Next -->
+                    <!-- NEXT -->
 
                     <i
                         id="nextBtn"
-                        class="fa-solid fa-forward-step player_control_icon">
-                    </i>
+                        class="fa-solid fa-forward-step player_control_icon"
+                        title="Next"
+                    ></i>
 
 
-                    <!-- Repeat -->
+                    <!-- REPEAT -->
 
                     <i
-                        class="fa-solid fa-repeat player_control_icon">
-                    </i>
+                        class="fa-solid fa-repeat player_control_icon"
+                        title="Repeat"
+                    ></i>
+
 
                 </div>
 
 
-                <!-- ================= PROGRESS BAR ================= -->
+
+                <!-- ================================================= -->
+                <!--                  PROGRESS BAR                     -->
+                <!-- ================================================= -->
 
                 <div class="playback_bar">
 
@@ -528,57 +725,54 @@
                     >
 
 
-                    <span class="tot_time">00:00
-                        
+                    <span class="tot_time">
+                        00:00
                     </span>
 
+
                 </div>
+
 
             </div>
 
 
-            <!-- ================= RIGHT CONTROLS ================= -->
+
+            <!-- ================================================= -->
+            <!--                 RIGHT CONTROLS                     -->
+            <!-- ================================================= -->
 
             <div class="control">
 
 
-                <!-- Microphone -->
-
                 <img
                     src="Assets/mike.png"
                     class="right_con"
-                    style="height: 35px; width: 27px;"
+                    alt="Microphone"
                 >
 
-
-                <!-- Control Icon -->
 
                 <img
                     src="Assets/controls_icon3.png"
                     class="right_con"
-                    style="height: 20px; width: 20px; opacity: 0.7;"
+                    alt="Control"
                 >
 
-
-                <!-- Control Icon -->
 
                 <img
                     src="Assets/controls_icon4.png"
                     class="right_con"
-                    style="height: 15px; width: 17px; opacity: 0.7;"
+                    alt="Control"
                 >
 
-
-                <!-- Speaker -->
 
                 <img
                     src="Assets/speaker.png"
                     class="right_con"
-                    style="height: 35px; width: 25px; margin-right: 0.3rem;"
+                    alt="Speaker"
                 >
 
 
-                <!-- Volume -->
+                <!-- VOLUME -->
 
                 <input
                     type="range"
@@ -589,32 +783,35 @@
                 >
 
 
-                <!-- TV -->
-
                 <img
                     src="Assets/tv.png"
                     class="right_con"
-                    style="height: 33px; width: 25px; margin-left: 0.3rem;"
+                    alt="Device"
                 >
 
 
-                <!-- Full Screen -->
-
                 <i
                     class="fa-solid fa-expand right_con"
-                    style="opacity: 0.7;">
-                </i>
+                    title="Fullscreen"
+                ></i>
+
 
             </div>
 
+
         </div>
+
 
     </div>
 
 
-    <!-- ================= JAVASCRIPT ================= -->
+
+    <!-- ================================================= -->
+    <!--                    JAVASCRIPT                     -->
+    <!-- ================================================= -->
 
     <script src="app.js"></script>
+
 
 </body>
 

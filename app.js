@@ -161,8 +161,8 @@ audioPlayer.addEventListener("timeupdate", function () {
     if (!isNaN(audioPlayer.duration)) {
 
         const remainingTime =
-            audioPlayer.duration - audioPlayer.currentTime;
-
+            audioPlayer.duration -
+            audioPlayer.currentTime;
 
         totalTime.textContent =
             formatTime(remainingTime);
@@ -177,7 +177,7 @@ audioPlayer.addEventListener("timeupdate", function () {
 });
 
 
-// ================= PROGRESS BAR CONTROL =================
+// ================= PROGRESS BAR =================
 
 progressBar.addEventListener("input", function () {
 
@@ -222,9 +222,7 @@ cards.forEach(function (card) {
 
 
     if (!songPath) {
-
         return;
-
     }
 
 
@@ -253,9 +251,7 @@ cards.forEach(function (card) {
 
 // ================= NEXT SONG =================
 
-// ================= NEXT SONG =================
-
-nextBtn.addEventListener("click", function () {
+function nextSong() {
 
     if (isShuffleOn) {
 
@@ -264,16 +260,22 @@ nextBtn.addEventListener("click", function () {
         do {
 
             randomIndex =
-                Math.floor(Math.random() * songs.length);
+                Math.floor(
+                    Math.random() * songs.length
+                );
 
-        } while (
+        }
+        while (
             randomIndex === currentSongIndex &&
             songs.length > 1
         );
 
+
         currentSongIndex = randomIndex;
 
-    } else {
+    }
+
+    else {
 
         currentSongIndex++;
 
@@ -285,64 +287,80 @@ nextBtn.addEventListener("click", function () {
 
     }
 
+
     loadSong(currentSongIndex, true);
 
-});
+}
+
 
 // ================= PREVIOUS SONG =================
 
-previousBtn.addEventListener("click", function () {
+function previousSong() {
 
-    currentSongIndex--;
+    if (isShuffleOn) {
+
+        let randomIndex;
+
+        do {
+
+            randomIndex =
+                Math.floor(
+                    Math.random() * songs.length
+                );
+
+        }
+        while (
+            randomIndex === currentSongIndex &&
+            songs.length > 1
+        );
 
 
-    if (currentSongIndex < 0) {
+        currentSongIndex = randomIndex;
 
-        currentSongIndex = songs.length - 1;
+    }
+
+    else {
+
+        currentSongIndex--;
+
+        if (currentSongIndex < 0) {
+
+            currentSongIndex =
+                songs.length - 1;
+
+        }
 
     }
 
 
     loadSong(currentSongIndex, true);
 
+}
+
+
+// ================= NEXT BUTTON =================
+
+nextBtn.addEventListener("click", function () {
+
+    nextSong();
+
 });
 
 
-// ================= AUTO NEXT =================
+// ================= PREVIOUS BUTTON =================
+
+previousBtn.addEventListener("click", function () {
+
+    previousSong();
+
+});
+
 
 // ================= AUTO NEXT =================
 
 audioPlayer.addEventListener("ended", function () {
 
-    if (isShuffleOn) {
-
-        let randomIndex;
-
-        do {
-
-            randomIndex =
-                Math.floor(Math.random() * songs.length);
-
-        } while (
-            randomIndex === currentSongIndex &&
-            songs.length > 1
-        );
-
-        currentSongIndex = randomIndex;
-
-    } else {
-
-        currentSongIndex++;
-
-        if (currentSongIndex >= songs.length) {
-
-            currentSongIndex = 0;
-
-        }
-
-    }
-
-    loadSong(currentSongIndex, true);
+    nextSong();
 
 });
 
@@ -370,11 +388,14 @@ shuffleBtn.addEventListener("click", function () {
 
     isShuffleOn = !isShuffleOn;
 
+
     if (isShuffleOn) {
 
         shuffleBtn.style.color = "#1db954";
 
-    } else {
+    }
+
+    else {
 
         shuffleBtn.style.color = "";
 
@@ -382,16 +403,20 @@ shuffleBtn.addEventListener("click", function () {
 
 });
 
-// ================= SPACEBAR =================
+
+// ================= KEYBOARD =================
 
 document.addEventListener("keydown", function (event) {
 
-    // Agar input/range par focus hai
+    // Ignore input/range
+
     if (
         event.target.tagName === "INPUT" ||
         event.target.tagName === "TEXTAREA"
     ) {
+
         return;
+
     }
 
 
@@ -401,99 +426,82 @@ document.addEventListener("keydown", function (event) {
 
         event.preventDefault();
 
+
         if (audioPlayer.paused) {
 
             audioPlayer.play();
 
-            playPauseBtn.classList.remove("fa-circle-play");
-            playPauseBtn.classList.add("fa-circle-pause");
+            playPauseBtn.classList.remove(
+                "fa-circle-play"
+            );
 
-        } else {
+            playPauseBtn.classList.add(
+                "fa-circle-pause"
+            );
+
+        }
+
+        else {
 
             audioPlayer.pause();
 
-            playPauseBtn.classList.remove("fa-circle-pause");
-            playPauseBtn.classList.add("fa-circle-play");
+            playPauseBtn.classList.remove(
+                "fa-circle-pause"
+            );
+
+            playPauseBtn.classList.add(
+                "fa-circle-play"
+            );
 
         }
 
     }
 
 
-    // ================= KEYBOARD NEXT =================
+    // ================= RIGHT =================
 
     if (event.code === "ArrowRight") {
 
         event.preventDefault();
 
-        if (isShuffleOn) {
-
-            let randomIndex;
-
-            do {
-
-                randomIndex =
-                    Math.floor(Math.random() * songs.length);
-
-            } while (
-                randomIndex === currentSongIndex &&
-                songs.length > 1
-            );
-
-            currentSongIndex = randomIndex;
-
-        } else {
-
-            currentSongIndex++;
-
-            if (currentSongIndex >= songs.length) {
-                currentSongIndex = 0;
-            }
-
-        }
-
-        loadSong(currentSongIndex, true);
+        nextSong();
 
     }
 
 
-    // ================= KEYBOARD PREVIOUS =================
-
-    // ================= KEYBOARD PREVIOUS =================
+    // ================= LEFT =================
 
     if (event.code === "ArrowLeft") {
 
         event.preventDefault();
 
-        if (isShuffleOn) {
-
-            let randomIndex;
-
-            do {
-
-                randomIndex =
-                    Math.floor(Math.random() * songs.length);
-
-            } while (
-                randomIndex === currentSongIndex &&
-                songs.length > 1
-            );
-
-            currentSongIndex = randomIndex;
-
-        } else {
-
-            currentSongIndex--;
-
-            if (currentSongIndex < 0) {
-
-                currentSongIndex = songs.length - 1;
-
-            }
-
-        }
-
-        loadSong(currentSongIndex, true);
+        previousSong();
 
     }
+
+});
+
+
+// =================================================
+// MOBILE SIDEBAR
+// =================================================
+
+const sidebar = document.getElementById("sidebar");
+const sidebarBtn = document.getElementById("sidebarBtn");
+const closeSidebar = document.getElementById("closeSidebar");
+
+
+// Open sidebar
+sidebarBtn.addEventListener("click", function () {
+
+    sidebar.classList.add("active");
+
+});
+
+
+// Close sidebar
+closeSidebar.addEventListener("click", function () {
+
+    sidebar.classList.remove("active");
+
 });
